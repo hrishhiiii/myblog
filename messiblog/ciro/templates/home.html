@@ -1,0 +1,140 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Leomessi</title>
+  <!-- Bootstrap CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    /* Custom styles for the carousel */
+    .carousel-item img {
+      height: 900px; /* Adjust the height of the carousel images */
+      object-fit: cover; /* Ensure the images cover the entire carousel */
+    }
+
+    /* Style for the footer */
+    footer {
+      background-color: #343a40; /* Dark background color */
+      color: #fff; /* Light text color */
+      padding: 20px 0; /* Padding for top and bottom */
+    }
+
+    footer .nav-link {
+      color: #fff; /* Footer navigation link color */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LIONEL MESSI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- End of Navbar -->
+
+  <!-- Content Block -->
+  <div class="container mt-5">
+    <!-- Slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'photo-1.webp' %}" class="d-block w-100" alt="Slider Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'photo_1.jpg' %}" class="d-block w-100" alt="Slider Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'photo_1.jpg' %}" class="d-block w-100" alt="Slider Image 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End of Slider -->
+
+    <!-- Blog Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Lionel Andrés Messi</h2>
+          <p>
+            Lionel Messi is one of the most iconic and talented footballers of all time. Born on June 24, 1987, in Rosario, Argentina, Messi began his football journey at a very young age, showing exceptional skills and talent on the field. He joined FC Barcelona's youth academy, La Masia, at the age of 13, and the rest, as they say, is history.
+            
+            Messi's playing style is characterized by his incredible dribbling ability, close ball control, vision, and precision in passing and shooting. His low center of gravity allows him to maneuver through defenses with ease, earning him the nickname "The Flea."
+            
+            Throughout his illustrious career at Barcelona, Messi has shattered numerous records, winning countless domestic and international titles, including multiple UEFA Champions League titles and La Liga titles. Individually, he's won the FIFA Ballon d'Or award 8 times, establishing himself as one of the greatest players to have ever graced the game and the player who recieved more balland'or award.
+            
+            In 2021, Messi made a surprising move to Paris Saint-Germain (PSG) after spending his entire professional career at Barcelona. This move sent shockwaves across the footballing world and marked a new chapter in Messi's career.
+            
+            Off the field, Messi is known for his humility and philanthropy. He's involved in various charitable activities, including his own foundation, which focuses on providing opportunities for disadvantaged children.
+            
+            Messi's impact on the world of football is immense, and his legacy will undoubtedly be remembered for generations to come. Whether you're a fan or not, there's no denying the sheer brilliance and magic that Messi brings to the beautiful game.
+
+            At last recieving the 2022 worldcup for argentins by his captiancy messi is the one player who  achieved everything in football and the 'GREATEST OF ALL TIME'</p>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'images(1).jpeg' %}" alt="Blog Photo" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <!-- End of Blog Section -->
+  </div>
+  <!-- End of Content Block -->
+
+  <!-- Footer -->
+  <footer class="py-3 bg-dark">
+    <div class="container">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Blog</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Contact</a></li>
+      </ul>
+      <p class="text-center text-light">&copy; Leomessi the greatest of all time</p>
+    </div>
+  </footer>
+  <!-- End of Footer -->
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm 

@@ -1,0 +1,44 @@
+/* styles.css */
+
+/* Carousel */
+.carousel-item img {
+    object-fit: cover;
+    height: 700px;
+  }
+  
+  /* Blog Section */
+  .blog .card {
+    transition: transform 0.2s;
+  }
+  
+  .blog .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .blog .card-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .blog .card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Theme Toggle Button */
+  .bd-mode-toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .dropdown-menu-end {
+    right: 0;
+    left: auto;
+  }
+  
